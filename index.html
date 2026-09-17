@@ -136,7 +136,8 @@
   .tag-progress .dot{width:6px; height:6px; border-radius:50%; background:#7FD1AE; box-shadow:0 0 0 3px rgba(127,209,174,.18);}
   .card h3{font-family:var(--display); font-weight:700; font-size:19px; letter-spacing:-.005em; margin:0 0 9px; line-height:1.2;}
   .card .desc{font-size:14px; color:var(--muted); margin:0 0 16px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden;}
-  .metrics{display:flex; gap:24px; margin:0 0 16px;}
+  .card.wide .desc{-webkit-line-clamp:4;}
+  .metrics{display:flex; gap:24px; margin:0 0 16px; flex-wrap:wrap;}
   .metric .mv{font-family:var(--display); font-weight:700; font-size:19px; line-height:1; color:var(--text);}
   .metric .ml-lbl{font-family:var(--mono); font-size:10.5px; color:var(--dim); margin-top:5px; letter-spacing:.02em;}
   .stack{display:flex; flex-wrap:wrap; gap:6px; margin-top:auto; padding-top:4px;}
@@ -181,6 +182,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#work">Work</a>
+      <a href="Gopika_Sree_Kumar_AI_DataScience_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       <a href="mailto:gopikaskumar18101996@gmail.com" class="nav-cta">Get in touch</a>
     </div>
   </div>
@@ -204,9 +206,10 @@
       </div>
       <div class="cta-row">
         <a href="mailto:gopikaskumar18101996@gmail.com" class="btn btn-primary">Get in touch <span class="arw">→</span></a>
+        <a href="Gopika_Sree_Kumar_AI_DataScience_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Resume ↓</a>
         <a href="#work" class="btn btn-ghost">View work</a>
         <a href="https://github.com/Gopikaskumar18" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
-        <a href="https://www.linkedin.com/in/gopika-sree-kumar" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/gopika-sree-kumar-895aa3160/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
       </div>
     </div>
   </div>
@@ -248,6 +251,7 @@
       <span class="chip">Machine Learning</span>
       <span class="chip">NLP</span>
       <span class="chip">RAG / LLMs</span>
+      <span class="chip">Knowledge Graphs</span>
       <span class="chip">AI Agents</span>
       <span class="chip">Docker</span>
     </div>
@@ -266,28 +270,10 @@
             <p class="xp-role">Data Analytics &amp; Research Intern</p>
             <p class="xp-co">International Sibling Society</p>
             <ul>
-              <li>
-                Contributed to an <strong>AI-powered SDG knowledge and classification workflow</strong>, combining
-                document-based RAG over partnership MOUs, program reports and SDG framework documents with
-                LLM-based tagging of program records against the 17 SDGs.
-              </li>
-
-              <li>
-                Worked on the <strong>retrieval pipeline</strong>, including document chunking, embeddings, retrieval
-                and prompt refinement to improve source-grounded answers; evaluated responses using a held-out set of
-                180 test questions and reviewed failure cases to identify areas for improvement.
-              </li>
-
-              <li>
-                Built the supporting data workflow in <strong>BigQuery and dbt</strong> to refresh classifications and
-                SDG coverage reporting, enabling staff to explore partnership activities and SDG representation across
-                programs and countries.
-              </li>
-
-              <li>
-                Mentored undergraduate interns on <strong>data storytelling, dashboard development and
-                self-service analytics</strong>.
-              </li>
+              <li>Contributed to an <strong>AI-powered SDG knowledge and classification workflow</strong>, combining document-based RAG over partnership MOUs, program reports and SDG framework documents with LLM-based tagging of program records against the 17 SDGs.</li>
+              <li>Worked on the <strong>retrieval pipeline</strong>, including document chunking, embeddings, retrieval and prompt refinement to improve source-grounded answers; evaluated responses using a held-out set of 180 test questions and reviewed failure cases to identify areas for improvement.</li>
+              <li>Built the supporting data workflow in <strong>BigQuery and dbt</strong> to refresh classifications and SDG coverage reporting, enabling staff to explore partnership activities and SDG representation across programs and countries.</li>
+              <li>Mentored undergraduate interns on <strong>data storytelling, dashboard development and self-service analytics</strong>.</li>
             </ul>
           </div>
         </div>
@@ -300,41 +286,12 @@
             <p class="xp-role">Senior Business Analyst</p>
             <p class="xp-co">Tiger Analytics</p>
             <ul>
-              <li>
-                Partnered with a <strong>data science team at a banking client</strong> on an NLP
-                classification solution for customer chat and call transcripts, contributing to
-                text preprocessing, feature development and analysis of category-specific language
-                patterns.
-              </li>
-
-              <li>
-                Cleaned and normalized transcript data using <strong>Python, pandas, regex, NLTK and SQL</strong>,
-                profiled category distributions and developed keyword and phrase features used to classify
-                interactions as Solved, Unresolved or Deferred.
-              </li>
-
-              <li>
-                Reviewed training and validation examples with the data science team and analyzed
-                <strong>misclassified transcripts</strong> to identify recurring failure patterns and refine
-                features across model iterations.
-              </li>
-
-              <li>
-                Engineered automated <strong>Snowflake ETL pipelines</strong> using Python, SQL and stored
-                procedures, generating 100+ tables with scheduled daily refreshes and eliminating
-                significant manual reporting work.
-              </li>
-
-              <li>
-                Designed <strong>relational and dimensional data models</strong> and KPI frameworks from
-                complex business and security requirements, supporting analytical and operational reporting.
-              </li>
-
-              <li>
-                Delivered compliance and operational dashboards using <strong>Tableau and Sigma</strong>, reducing
-                incident investigation time by approximately <strong>60%</strong> through improved visibility into
-                security and operational data.
-              </li>
+              <li>Partnered with a <strong>data science team at a banking client</strong> on an NLP classification solution for customer chat and call transcripts, contributing to text preprocessing, feature development and analysis of category-specific language patterns.</li>
+              <li>Cleaned and normalized transcript data using <strong>Python, pandas, regex, NLTK and SQL</strong>, profiled category distributions and developed keyword and phrase features used to classify interactions as Solved, Unresolved or Deferred.</li>
+              <li>Reviewed training and validation examples with the data science team and analyzed <strong>misclassified transcripts</strong> to identify recurring failure patterns and refine features across model iterations.</li>
+              <li>Engineered automated <strong>Snowflake ETL pipelines</strong> using Python, SQL and stored procedures, generating 100+ tables with scheduled daily refreshes and eliminating significant manual reporting work.</li>
+              <li>Designed <strong>relational and dimensional data models</strong> and KPI frameworks from complex business and security requirements, supporting analytical and operational reporting.</li>
+              <li>Delivered compliance and operational dashboards using <strong>Tableau and Sigma</strong>, reducing incident investigation time by approximately <strong>60%</strong> through improved visibility into security and operational data.</li>
             </ul>
           </div>
         </div>
@@ -347,23 +304,9 @@
             <p class="xp-role">Assistant System Engineer</p>
             <p class="xp-co">Tata Consultancy Services</p>
             <ul>
-              <li>
-                Supported a large-scale <strong>Teradata-to-Snowflake migration</strong> for a banking
-                client, converting SQL procedures and validating migrated datasets for correctness and
-                data integrity.
-              </li>
-
-              <li>
-                Performed <strong>data validation, reconciliation and testing</strong> across migrated
-                workloads, investigating issues involving date conversions, joins, dependent objects
-                and schema differences.
-              </li>
-
-              <li>
-                Improved query performance by approximately <strong>25%</strong> through SQL optimization and
-                validation of migrated workloads, working with QA and governance teams to support reliable
-                migration and downstream reporting.
-              </li>
+              <li>Supported a large-scale <strong>Teradata-to-Snowflake migration</strong> for a banking client, converting SQL procedures and validating migrated datasets for correctness and data integrity.</li>
+              <li>Performed <strong>data validation, reconciliation and testing</strong> across migrated workloads, investigating issues involving date conversions, joins, dependent objects and schema differences.</li>
+              <li>Improved query performance by approximately <strong>25%</strong> through SQL optimization and validation of migrated workloads, working with QA and governance teams to support reliable migration and downstream reporting.</li>
             </ul>
           </div>
         </div>
@@ -377,10 +320,7 @@
     <div class="sec-head">
       <span class="eyebrow">Work</span>
       <h2>Featured projects</h2>
-      <p>
-        Selected work across data engineering, analytics, machine learning and AI — from reliable
-        data pipelines to intelligent applications.
-      </p>
+      <p>Selected work across data engineering, analytics, machine learning and AI — from reliable data pipelines to intelligent applications.</p>
     </div>
 
     <div class="filter" role="group" aria-label="Filter projects">
@@ -391,6 +331,46 @@
     </div>
 
     <div class="cards" id="cards">
+
+      <article class="card wide" data-tracks="ai">
+        <div class="card-media">
+          <img class="cover-img" src="img/mahabharata.png" alt="" loading="lazy" onerror="this.remove();"><svg class="cover" viewBox="0 0 300 240" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="bg0" cx="50%" cy="40%" r="90%"><stop offset="0%" stop-color="#1B2333"/><stop offset="100%" stop-color="#11151D"/></radialGradient>
+            </defs>
+            <rect width="300" height="240" fill="url(#bg0)"/>
+            <g stroke="#39465A" stroke-width="1.4">
+              <line x1="80" y1="70" x2="150" y2="120"/><line x1="150" y1="120" x2="225" y2="65"/>
+              <line x1="80" y1="70" x2="60" y2="160"/><line x1="150" y1="120" x2="120" y2="190"/>
+              <line x1="225" y1="65" x2="245" y2="160"/><line x1="245" y1="160" x2="180" y2="195"/>
+              <line x1="60" y1="160" x2="120" y2="190"/>
+            </g>
+            <g stroke="#C9A063" stroke-width="2.2" fill="none"><path d="M60 160 L120 190 L150 120 L225 65"/></g>
+            <g fill="#1C2432" stroke="#2E3A4C" stroke-width="1.4">
+              <circle cx="80" cy="70" r="11"/><circle cx="245" cy="160" r="11"/><circle cx="180" cy="195" r="9"/>
+            </g>
+            <g fill="rgba(201,160,99,.18)" stroke="#C9A063" stroke-width="1.6">
+              <circle cx="60" cy="160" r="12"/><circle cx="120" cy="190" r="10"/><circle cx="150" cy="120" r="15"/><circle cx="225" cy="65" r="12"/>
+            </g>
+            <g font-family="'JetBrains Mono',monospace" font-size="9" fill="#9CA9BB" text-anchor="middle">
+              <text x="150" y="124" fill="#C9A063">KUNTI</text><text x="225" y="44">ARJUNA</text><text x="60" y="186">KARNA</text><text x="80" y="48">SURYA</text>
+            </g>
+            <text x="20" y="226" font-family="'JetBrains Mono',monospace" font-size="9" fill="#6B7788" letter-spacing="1">MULTI-HOP PATH · CITED p.</text>
+          </svg>
+        </div>
+        <div class="card-content">
+          <div class="card-top"><span class="badge">Graph RAG · LLMs</span></div>
+          <h3>Mahabharata Intelligence — Graph RAG</h3>
+          <p class="desc">Question answering over the unabridged Mahabharata (2,328 pages, 2.55M words) using a knowledge graph of 378 entities and 2,805 relations plus FAISS search over 9,280 page-cited chunks. A query planner links epithets to canonical characters for multi-hop traversal; a hybrid reranker grounds every claim in cited evidence and abstains when support is missing.</p>
+          <div class="metrics">
+            <div class="metric"><div class="mv">1.00</div><div class="ml-lbl">PATH ACCURACY (VS 0.00 VECTOR)</div></div>
+            <div class="metric"><div class="mv">1.00</div><div class="ml-lbl">CITATION VALIDITY</div></div>
+            <div class="metric"><div class="mv">274</div><div class="ml-lbl">PYTEST TESTS</div></div>
+          </div>
+          <div class="stack"><span class="chip">Python</span><span class="chip">Knowledge Graph</span><span class="chip">FAISS</span><span class="chip">Claude</span><span class="chip">Streamlit</span></div>
+          <div class="card-links"><a href="https://github.com/Gopikaskumar18/mahabharata-graph-rag" target="_blank" rel="noopener">View on GitHub <span class="arw">↗</span></a></div>
+        </div>
+      </article>
 
       <article class="card" data-tracks="analytics">
         <div class="card-media">
@@ -433,7 +413,7 @@
             <div class="metric"><div class="mv">18/18</div><div class="ml-lbl">DBT TESTS PASS</div></div>
           </div>
           <div class="stack"><span class="chip">dbt</span><span class="chip">Snowflake</span><span class="chip">SQL</span><span class="chip">Dimensional Modeling</span></div>
-          <div class="card-links"><a href="https://github.com/Gopikaskumar18/Warehouse-Copilot" target="_blank" rel="noopener">View on GitHub <span class="arw">↗</span></a></div>
+          <div class="card-links"><a href="https://github.com/Gopikaskumar18/ecommerce-dbt-snowflake" target="_blank" rel="noopener">View on GitHub <span class="arw">↗</span></a></div>
         </div>
       </article>
 
@@ -620,7 +600,8 @@
     <p>Whichever track you're hiring for, I'd love to walk you through the work.</p>
     <div class="contact-row">
       <a href="mailto:gopikaskumar18101996@gmail.com" class="btn btn-primary">Email me <span class="arw">→</span></a>
-      <a href="https://www.linkedin.com/in/gopika-sree-kumar" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+      <a href="Gopika_Sree_Kumar_AI_DataScience_Resume.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Download resume</a>
+      <a href="https://www.linkedin.com/in/gopika-sree-kumar-895aa3160/" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
       <a href="https://github.com/Gopikaskumar18" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
     </div>
   </div>
