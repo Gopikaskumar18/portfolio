@@ -123,9 +123,12 @@
   .card{background:var(--panel); display:flex; flex-direction:column; transition:background .2s;}
   .card:hover{background:var(--panel-2);}
   .card.hide{display:none;}
+  .card.span{grid-column:1 / -1; flex-direction:row;}
+  .card.span .card-media{width:40%; height:auto; min-height:280px; border-bottom:none; border-right:1px solid var(--line-soft); flex-shrink:0;}
+  @media (max-width:720px){ .card.span{flex-direction:column;} .card.span .card-media{width:100%; height:220px; min-height:0; border-right:none; border-bottom:1px solid var(--line-soft);} }
   .card.wide{grid-column:1 / -1; flex-direction:row;}
-  .card-media{aspect-ratio:16/9; max-height:260px; background:#12161E; overflow:hidden; border-bottom:1px solid var(--line-soft); position:relative;}
-  .card.wide .card-media{aspect-ratio:auto; width:40%; max-height:320px; border-bottom:none; border-right:1px solid var(--line-soft); flex-shrink:0;}
+  .card-media{width:100%; height:240px; background:#12161E; overflow:hidden; border-bottom:1px solid var(--line-soft); position:relative;}
+  .card.wide .card-media{width:40%; height:auto; min-height:280px; border-bottom:none; border-right:1px solid var(--line-soft); flex-shrink:0;}
   .card-media svg.cover{width:100%; height:100%; display:block;}
   .card-media img.cover-img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; z-index:2;}
   .card-content{padding:24px; display:flex; flex-direction:column; flex:1;}
@@ -147,7 +150,7 @@
   .card-links a:hover{color:var(--accent);}
   .card-links .arw{transition:transform .2s;}
   .card-links a:hover .arw{transform:translate(2px,-2px);}
-  @media (max-width:720px){ .cards{grid-template-columns:1fr;} .card.wide{flex-direction:column;} .card.wide .card-media{width:100%; aspect-ratio:16/9; border-right:none; border-bottom:1px solid var(--line-soft);} }
+  @media (max-width:720px){ .cards{grid-template-columns:1fr;} .card.wide{flex-direction:column;} .card.wide .card-media{width:100%; height:220px; min-height:0; border-right:none; border-bottom:1px solid var(--line-soft);} }
 
   /* MORE PROJECTS */
   .grid2{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line-soft); border:1px solid var(--line-soft); border-radius:14px; overflow:hidden;}
@@ -633,7 +636,20 @@
       const show = (f === 'all') || tracks.includes(f);
       c.classList.toggle('hide', !show);
     });
+    fixGaps();
   }
+  // If an odd number of half-width cards sit between wide cards, stretch the last one so no empty cell is left
+  function fixGaps(){
+    let run = [];
+    const flush = () => { if (run.length % 2 === 1) run[run.length-1].classList.add('span'); run = []; };
+    cards.forEach(c => {
+      c.classList.remove('span');
+      if (c.classList.contains('hide')) return;
+      if (c.classList.contains('wide')) { flush(); } else { run.push(c); }
+    });
+    flush();
+  }
+  fixGaps();
   fbtns.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.f)));
 </script>
 </body>
